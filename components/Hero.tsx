@@ -1,55 +1,84 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/lib/site";
 
 export default function Hero() {
   return (
-    <section className="border-b border-slate-200">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 lg:grid-cols-2 lg:items-center">
-        <div>
-          <p className="text-sm font-medium text-slate-600">{site.name}</p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Building Reliable Software for Modern Businesses
-          </h1>
-          <p className="mt-5 text-lg leading-relaxed text-slate-600">
-            We help startups and enterprises design, build, and scale web, mobile, and cloud products
-            with speed, clarity, and quality.
-          </p>
+    <section className="relative min-h-[95vh] overflow-hidden flex items-center">
+      {/* ANIMATED GRADIENT */}
+       {/* ANIMATED GRADIENT */}
+  <div className="absolute inset-0 -z-20 hero-gradient" />
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/company/contact"
-              className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white"
-            >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/resources/case-studies"
-              className="rounded-xl border border-slate-200 px-5 py-3 text-sm font-medium"
-            >
-              View Case Studies
-            </Link>
+      {/* SOFT BLOB */}
+      <div
+        className="
+  absolute -bottom-48 left-[-10%]
+  h-[650px] w-[140%]
+  -z-10
+  rounded-[100%]
+  bg-blue-100/40
+  blur-[160px]
+"
+
+        style={{
+          animation: "wave-move 22s ease-in-out infinite",
+        }}
+      />
+
+      {/* CONTENT */}
+      <div className="relative mx-auto max-w-7xl px-6 py-40 w-full">
+        <div className="grid items-center gap-20 lg:grid-cols-2">
+          {/* LEFT IMAGE */}
+          <div className="flex justify-center lg:justify-start">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+              <Image
+                src="/images/Metaball.gif"
+                alt="Hero visual"
+                width={560}
+                height={460}
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-6 text-sm text-slate-600">
-            <span>• Product-minded delivery</span>
-            <span>• Security-first engineering</span>
-            <span>• Clean, scalable architecture</span>
-          </div>
-        </div>
+          {/* RIGHT TEXT */}
+          <div className="space-y-8">
+            <h1 className="text-5xl sm:text-6xl md:text-6xl  tracking-tight text-slate-900 leading-tight">
+              <span className="block drop-shadow-sm">
+                Building Reliable
+              </span>
+              <span className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Software for Modern Businesses
+              </span>
+            </h1>
 
-        <div className="rounded-2xl border border-slate-200 p-8 shadow-sm">
-          <div className="text-sm font-medium text-slate-700">What we deliver</div>
-          <div className="mt-4 grid gap-3">
-            {["MVP to enterprise platforms", "Modern UI/UX systems", "Cloud-ready deployments", "Support & scaling"].map(
-              (x) => (
-                <div key={x} className="rounded-xl border border-slate-200 p-4 text-sm text-slate-700">
-                  {x}
-                </div>
-              )
-            )}
+            <p className="max-w-xl text-lg leading-relaxed text-slate-700">
+              We help startups and enterprises design, build, and scale web,
+              mobile, & cloud products with speed, clarity, and quality.
+            </p>
+
+            <div className="flex gap-5 pt-4">
+              <Link
+                href="/company/contact"
+                className="rounded-full bg-blue-600 px-9 py-4 text-sm font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl hover:bg-blue-700"
+              >
+                Book a Consultation
+              </Link>
+
+              <Link
+                href="/services"
+                className="rounded-full border border-slate-900/20 px-9 py-4 text-sm font-semibold text-slate-900 backdrop-blur transition hover:bg-white/60 hover:-translate-y-0.5"
+              >
+                Our Services
+              </Link>
+            </div>
           </div>
         </div>
       </div>
+
+      
     </section>
   );
 }

@@ -14,9 +14,9 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <CapabilityGrid />
       </section>
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      {/* <section className="mx-auto max-w-6xl px-6 py-16">
         <CaseStudyGrid />
-      </section>
+      </section> */}
       <CTA />
     </main>
   );

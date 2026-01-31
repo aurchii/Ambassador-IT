@@ -13,17 +13,9 @@ export default function CareersPage() {
       <SectionHeading
         title="Careers"
         subtitle="Join a team that values learning, collaboration, and craftsmanship."
-      />
-      <div className="mt-10 grid gap-4 sm:grid-cols-2">
-        {roles.map((r) => (
-          <div key={r.title} className="rounded-2xl border border-slate-200 p-6">
-            <div className="font-semibold">{r.title}</div>
-            <p className="mt-3 text-sm text-slate-600">{r.desc}</p>
-            <button className="mt-5 rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white">
-              Apply (placeholder)
-            </button>
-          </div>
-        ))}
+      /><br/>
+      <div className="mt-10 grid gap-4 justify-center text-3xl font-semibold text-black-700">
+        Currently no positions are open. Please check back later.
       </div>
     </main>
   );

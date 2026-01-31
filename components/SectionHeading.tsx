@@ -3,14 +3,19 @@ export default function SectionHeading({
   subtitle,
 }: {
   title: string;
-  subtitle?: string;
+  subtitle: string;
 }) {
   return (
-    <div className="max-w-2xl">
-      <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>
-      {subtitle ? (
-        <p className="mt-4 text-lg leading-relaxed text-slate-600">{subtitle}</p>
-      ) : null}
+    <div className="mx-auto max-w-3xl text-center">
+      <h2 className="text-4xl sm:text-5xl  tracking-tight text-slate-900">
+        <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          {title}
+        </span>
+      </h2>
+
+      <p className="mt-5 text-base sm:text-lg leading-relaxed text-slate-600">
+        {subtitle}
+      </p>
     </div>
   );
 }

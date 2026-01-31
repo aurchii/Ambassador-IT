@@ -16,12 +16,10 @@ export default function ContactPage() {
             <input className="rounded-xl border border-slate-200 px-4 py-3 text-sm" placeholder="Email" />
             <input className="rounded-xl border border-slate-200 px-4 py-3 text-sm" placeholder="Company (optional)" />
             <textarea className="min-h-[140px] rounded-xl border border-slate-200 px-4 py-3 text-sm" placeholder="Message" />
-            <button type="button" className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white">
-              Send Message (placeholder)
+            <button type="button" className="rounded-xl bg-blue-800 px-3 py-3 text-sm font-medium text-white">
+              Send Message 
             </button>
-            <p className="text-xs text-slate-500">
-              Hook this up later to email/API (Resend/SendGrid) or a CRM form.
-            </p>
+           
           </div>
         </form>
 
@@ -32,7 +30,7 @@ export default function ContactPage() {
 
           <div className="mt-8">
             <div className="font-semibold">Business hours</div>
-            <p className="mt-2 text-sm text-slate-600">Sun–Thu: 10:00–18:00 (placeholder)</p>
+            <p className="mt-2 text-sm text-slate-600">Sun–Thu: 10:00–18:00 </p>
           </div>
         </div>
       </div>
