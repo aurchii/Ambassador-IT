@@ -15,7 +15,7 @@ export default function Navbar() {
           <Image
             src="/images/logo.png" 
             alt="Ambassador IT"
-            width={180}
+            width={200}
             height={20}
             priority
           />
